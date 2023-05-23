@@ -37,6 +37,7 @@ import {
   NftOrdering,
   NftSaleMarketplace,
   NftSaleTakerType,
+  NftSpamConfidenceLevel,
   NftTokenType,
   OwnedBaseNft,
   OwnedBaseNftsResponse,
@@ -996,6 +997,7 @@ interface GetContractsForOwnerParams {
   pageSize?: number;
   includeFilters?: NftFilters[];
   excludeFilters?: NftFilters[];
+  spamConfidenceLevel?: NftSpamConfidenceLevel;
   orderBy?: NftOrdering;
 }
 
