@@ -326,6 +326,7 @@ export async function getContractsForOwner(
     owner,
     excludeFilters: options?.excludeFilters,
     includeFilters: options?.includeFilters,
+    spamConfidenceLevel: options?.spamConfidenceLevel,
     pageKey: options?.pageKey,
     pageSize: options?.pageSize,
     orderBy: options?.orderBy
