@@ -742,6 +742,26 @@ export enum NftFilters {
 }
 
 /**
+ * Enum of NFT spam confidence filters that can be applied to a 
+ * {@link getNftsForOwner} or a {@link getContractsForOwner} request.
+ *
+ * @beta
+ */
+export enum NftSpamConfidenceLevel {
+  /** NFTs that have been classified as very high spam. */
+  VERY_HIGH = 'VERY_HIGH',
+
+  /** NFTs that have been classified as high spam. */
+  HIGH = 'HIGH',
+
+  /** NFTs that have been classified as medium spam. */
+  MEDIUM = 'MEDIUM',
+
+  /** NFTs that have been classified as low spam. */
+  LOW = 'LOW'
+}
+
+/**
  * Enum of ordering that can be applied to a {@link getNftsForOwner} or a
  * {@link getContractsForOwner} response.
  *
@@ -1004,6 +1024,12 @@ export interface GetContractsForOwnerOptions {
    * conjunction with {@link includeFilters}
    */
   excludeFilters?: NftFilters[];
+
+  /**
+   * Optional filter to be used in conjunction with {@link includeFilters} 
+   * or {@link excludeFilters}.
+   */
+  spamConfidenceLevel?: NftSpamConfidenceLevel;
 
   /**
    * Order in which to return results. By default, results are ordered by
