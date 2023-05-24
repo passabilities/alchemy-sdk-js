@@ -632,6 +632,12 @@ export interface GetNftsForOwnerOptions {
   includeFilters?: NftFilters[];
 
   /**
+   * Optional filter to be used in conjunction with {@link includeFilters}
+   * or {@link excludeFilters}.
+   */
+  spamConfidenceLevel?: NftSpamConfidenceLevel;
+
+  /**
    * Sets the total number of NFTs to return in the response. Defaults to 100.
    * Maximum page size is 100.
    */
@@ -685,6 +691,12 @@ export interface GetBaseNftsForOwnerOptions {
    * of these filters are included in the response.
    */
   includeFilters?: NftFilters[];
+
+  /**
+   * Optional filter to be used in conjunction with {@link includeFilters}
+   * or {@link excludeFilters}.
+   */
+  spamConfidenceLevel?: NftSpamConfidenceLevel;
 
   /**
    * Sets the total number of NFTs to return in the response. Defaults to 100.
@@ -742,7 +754,7 @@ export enum NftFilters {
 }
 
 /**
- * Enum of NFT spam confidence filters that can be applied to a 
+ * Enum of NFT spam confidence filters that can be applied to a
  * {@link getNftsForOwner} or a {@link getContractsForOwner} request.
  *
  * @beta
@@ -1026,7 +1038,7 @@ export interface GetContractsForOwnerOptions {
   excludeFilters?: NftFilters[];
 
   /**
-   * Optional filter to be used in conjunction with {@link includeFilters} 
+   * Optional filter to be used in conjunction with {@link includeFilters}
    * or {@link excludeFilters}.
    */
   spamConfidenceLevel?: NftSpamConfidenceLevel;

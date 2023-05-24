@@ -218,6 +218,7 @@ export async function getNftsForOwner(
     filters: options?.excludeFilters,
     excludeFilters: options?.excludeFilters,
     includeFilters: options?.includeFilters,
+    spamConfidenceLevel: options?.spamConfidenceLevel,
     owner,
     pageSize: options?.pageSize,
     withMetadata,
@@ -930,6 +931,7 @@ interface GetNftsAlchemyParams {
   filters?: string[];
   excludeFilters?: NftFilters[];
   includeFilters?: NftFilters[];
+  spamConfidenceLevel?: NftSpamConfidenceLevel;
   pageSize?: number;
   withMetadata: boolean;
   tokenUriTimeoutInMs?: number;
